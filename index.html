@@ -46,6 +46,34 @@ border-radius:30px;
 margin:5px;
 }
 
+nav{
+background:#0056d6;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav .logo{
+color:white;
+font-size:24px;
+font-weight:bold;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 section{
 padding:60px 20px;
 max-width:1200px;
@@ -110,17 +138,7 @@ font-weight:bold;
 </style>
 </head>
 
-<body>
-<nav>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
-<header>
+<header id="home">
 <h1>OM SHREE SAI SERVICE</h1>
 <p>Water Purifier & Washing Machine Repair Services</p>
 
@@ -129,10 +147,10 @@ font-weight:bold;
 <a href="https://wa.me/919167371571" class="btn">WhatsApp</a>
 </header>
 
-<section>
+<section id="About us">
 <h2>About Us</h2>
 
-<div class="about">
+<div class="about us">
 Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, 
 Thane West.With a commitment to quality service and customer satisfaction,
 we specialize in the repair and maintenance of a wide range of Washing Machines,
@@ -148,7 +166,7 @@ Choose us for dependable service and peace of mind with every repair.
 </div>
 </section>
 
-<section>
+<section id="Our Service">
 <h2>Our Services</h2>
 
 <div class="services">
@@ -216,9 +234,7 @@ Choose us for dependable service and peace of mind with every repair.
 </div>
 </section>
 
-<section>
-
-  <section>
+<section id="Customer Reviews">
 <h2>Customer Reviews</h2>
 
 <div class="card">
@@ -233,7 +249,8 @@ Choose us for dependable service and peace of mind with every repair.
 ⭐⭐⭐⭐⭐ Professional technicians and same-day service.
 </div>
 </section>
-<section>
+  
+<section id="contact">
 <h2>Contact Us</h2>
 
 <div class="contact">
@@ -247,8 +264,6 @@ Choose us for dependable service and peace of mind with every repair.
 <br>
 
 <p>
-</section>
-<section>
 <strong>Address:</strong><br>
 Shop No. 1, New Ganesh Nagar,<br>
 Kolshet Road, Opp. Silver Line,<br>
