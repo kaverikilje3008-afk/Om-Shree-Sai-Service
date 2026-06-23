@@ -11,6 +11,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -18,20 +19,60 @@ background:#f5f9ff;
 color:#333;
 }
 
+/* NAVIGATION */
+
+nav{
+background:#0056d6;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+color:white;
+font-size:24px;
+font-weight:bold;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* HEADER */
+
 header{
-background:linear-gradient(135deg,#0d6efd,#4da3ff);
+background:linear-gradient(rgba(0,91,214,.8),rgba(77,163,255,.8)),
+url('images/banner.jpg');
+background-size:cover;
+background-position:center;
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:120px 20px;
 }
 
 header h1{
-font-size:45px;
+font-size:50px;
 margin-bottom:15px;
 }
 
 header p{
-font-size:20px;
+font-size:22px;
 margin-bottom:20px;
 }
 
@@ -39,12 +80,14 @@ margin-bottom:20px;
 display:inline-block;
 padding:12px 25px;
 background:white;
-color:#0d6efd;
+color:#0056d6;
 text-decoration:none;
-font-weight:bold;
 border-radius:30px;
+font-weight:bold;
 margin:5px;
 }
+
+/* SECTIONS */
 
 section{
 padding:60px 20px;
@@ -54,9 +97,18 @@ margin:auto;
 
 h2{
 text-align:center;
-color:#0d6efd;
+color:#0056d6;
 margin-bottom:30px;
 }
+
+.about{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+text-align:center;
+}
+
+/* SERVICES */
 
 .services{
 display:grid;
@@ -68,33 +120,50 @@ gap:20px;
 background:white;
 padding:25px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
 }
 
-.about{
-max-width:900px;
-margin:auto;
-padding:0 20px;
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* CONTACT */
 
 .contact{
 background:white;
 padding:30px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+line-height:2;
 }
 
+/* FOOTER */
+
 footer{
-background:#0d6efd;
+background:#0056d6;
 color:white;
 text-align:center;
 padding:20px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -108,68 +177,46 @@ text-decoration:none;
 font-weight:bold;
 }
 
-nav{
-background:#0056d6;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+/* MOBILE */
 
-nav ul{
-list-style:none;
-display:flex;
-gap:25px;
-margin:0;
-padding:0;
-}
+@media(max-width:768px){
 
 nav{
 flex-direction:column;
-padding:10px;
 }
 
 .logo{
-font-size:20px;
-text-align:center;
 margin-bottom:10px;
+font-size:20px;
 }
-@media (max-width:768px){
-  
+
 nav ul{
 flex-wrap:wrap;
 justify-content:center;
 gap:12px;
 }
 
-nav ul li a{
-font-size:16px;
-}
-
 header h1{
-font-size:40px;
+font-size:35px;
 }
 
 header p{
 font-size:18px;
 }
-  }
 
-
-.logo{
-color:white;
-font-size:24px;
-font-weight:bold;
 }
 </style>
+
 </head>
 
 <body>
-  
+
 <nav>
-<div class="logo"> Om Sai Service</div>
+<div class="logo">OM SHREE SAI SERVICE</div>
+
 <ul>
 <li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -177,87 +224,94 @@ font-weight:bold;
 </nav>
 
 <header id="home">
+
 <h1>OM SHREE SAI SERVICE</h1>
+
 <p>Water Purifier & Washing Machine Repair Services</p>
 
 <a href="tel:+918929813910" class="btn">Call Now</a>
 
 <a href="https://wa.me/919167371571" class="btn">WhatsApp</a>
+
 </header>
 
-<section id="About us">
+<section id="about">
+
 <h2>About Us</h2>
 
-<div class="about us">
-Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, 
-Thane West.With a commitment to quality service and customer satisfaction,
-we specialize in the repair and maintenance of a wide range of Washing Machines,
-Front Load Washing Machines, Top Load Washing Machines, Automatic Washing Machines,
-Semi-Automatic Washing Machines and water purifier repair,filter replacement,
-purifier installation and Annual maintenance. Our experienced technicians use
-reliable tools and genuine spare parts to ensure long-lasting repairs and efficient performance.
+<div class="about">
 
-We understand the value of your time and comfort, which is why we offer prompt and professional
-doorstep services.Om Shree Sai Services is just a call away. Our goal is to restore convenience 
-to your daily routine with honest, affordable, and quick repair solutions.
-Choose us for dependable service and peace of mind with every repair.
+Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, Thane West.
+
+We specialize in Water Purifier Repair, RO Installation, AMC Maintenance, Filter Replacement, Washing Machine Repair, Front Load Repair, Top Load Repair, Automatic and Semi Automatic Washing Machine Service.
+
+We provide quick doorstep service, genuine spare parts and affordable pricing.
+
 </div>
+
 </section>
 
-<section id="Our Service">
+<section id="services">
+
 <h2>Our Services</h2>
 
 <div class="services">
 
-<div class="card">
-<h3>Water Purifier Sales</h3>
-</div>
+<div class="card">Water Purifier Sales</div>
 
-<div class="card">
-<h3>Purifier Repair Service</h3>
-</div>
+<div class="card">Water Purifier Repair</div>
 
-<div class="card">
-<h3>AMC Maintenance</h3>
-</div>
+<div class="card">RO Installation</div>
 
-<div class="card">
-<h3>Filter Replacement</h3>
-</div>
+<div class="card">AMC Maintenance</div>
 
-<div class="card">
-<h3>RO Installation</h3>
-</div>
+<div class="card">Filter Replacement</div>
 
-<div class="card">
-<h3>Water Purifier Parts</h3>
-</div>
+<div class="card">Water Purifier Parts</div>
 
-<div class="card">
-<h3>Front Load Washing Machine Repair</h3>
-</div>
+<div class="card">Front Load Washing Machine Repair</div>
 
-<div class="card">
-<h3>Top Load Washing Machine Service</h3>
-</div>
+<div class="card">Top Load Washing Machine Service</div>
 
-<div class="card">
-<h3>Automatic Washing Machine Service</h3>
-</div>
+<div class="card">Automatic Washing Machine Service</div>
 
-<div class="card">
-<h3>Semi Automatic Washing Machine Service</h3>
-</div>
+<div class="card">Semi Automatic Washing Machine Service</div>
 
-<div class="card">
-<h3>Washing Machine Parts</h3>
-</div>
+<div class="card">Washing Machine Parts</div>
 
 </div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Our Work Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/machine.jpeg">
+
+<img src="images/top load machine.jpeg">
+
+<img src="images/top load.jpeg">
+
+<img src="images/front load.jpeg">
+
+<img src="images/purifier.jpeg">
+
+<img src="images/water purifier.jpeg">
+
+<img src="images/water.jpeg">
+
+<img src="images/watergaurd.jpeg">
+
+</div>
+
 </section>
 
 <section>
-<h2>Why Choose Us</h2>
+
+<h2>Why Choose Us?</h2>
 
 <div class="services">
 
@@ -270,36 +324,34 @@ Choose us for dependable service and peace of mind with every repair.
 <div class="card">Doorstep Support</div>
 
 </div>
+
 </section>
 
-<section id="Customer Reviews">
+<section>
+
 <h2>Customer Reviews</h2>
 
-<div class="card">
-⭐⭐⭐⭐⭐ Excellent washing machine repair service.
+<div class="services">
+
+<div class="card">⭐⭐⭐⭐⭐ Excellent Service</div>
+
+<div class="card">⭐⭐⭐⭐⭐ Quick RO Installation</div>
+
+<div class="card">⭐⭐⭐⭐⭐ Professional Technicians</div>
+
 </div>
 
-<div class="card">
-⭐⭐⭐⭐⭐ Quick RO installation and affordable rates.
-</div>
-
-<div class="card">
-⭐⭐⭐⭐⭐ Professional technicians and same-day service.
-</div>
 </section>
-  
+
 <section id="contact">
+
 <h2>Contact Us</h2>
 
 <div class="contact">
-<p>
-<strong>Phone:</strong> +91 8929813910</p>
 
-<br>
+<p><strong>Phone:</strong> +91 8929813910</p>
 
 <p><strong>Phone:</strong> +91 9167371571</p>
-
-<br>
 
 <p>
 <strong>Address:</strong><br>
@@ -307,8 +359,6 @@ Shop No. 1, New Ganesh Nagar,<br>
 Kolshet Road, Opp. Silver Line,<br>
 Dhokali, Thane West
 </p>
-
-<br>
 
 <p>
 <a href="https://goo.gl/maps/KgvA7ohJp7Htyg7s7">
@@ -321,12 +371,13 @@ View Location on Google Maps
 </section>
 
 <footer>
+
 © 2026 Om Shree Sai Service. All Rights Reserved.
+
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/919167371571">
-WhatsApp
+<a class="whatsapp" href="https://wa.me/919167371571">
+📞 Book Service
 </a>
 
 </body>
