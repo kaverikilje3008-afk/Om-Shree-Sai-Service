@@ -13,11 +13,9 @@ body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--black);line-heigh
 a{color:inherit;text-decoration:none}
 button,input,textarea{font:inherit}
 .wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
-
 .announce{height:38px;background:#202327;color:#fff;font-size:13px}
 .announce .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
 .announce a{font-weight:700}
-
 header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0 4px 18px #0000000b}
 .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{color:#202327;font-weight:950;font-size:27px;line-height:.91;letter-spacing:-1.1px;text-align:center}
@@ -30,7 +28,6 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
 .login{border:1px solid #d9dcdf;padding:10px 17px;border-radius:6px;background:#fff;font-weight:700;cursor:pointer}
 .login:hover{background:#f4f5f6}
 .menu-btn{display:none;border:0;background:#f1f2f3;border-radius:6px;padding:9px 12px;font-size:20px}
-
 .hero{height:min(660px,70vw);min-height:500px;position:relative;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#101214c9 0%,#141619a6 48%,#1113158c 100%),url("https://www.omshreesaiservice.in/images/slides/slider-mainbg-001.jpg") center 46%/cover no-repeat}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#10121425,transparent 40%);pointer-events:none}
 .hero-inner{position:relative;z-index:1;padding-top:20px}
@@ -38,7 +35,6 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
 .hero h1{font-size:clamp(46px,6vw,78px);line-height:1.1;letter-spacing:-2px;max-width:850px;font-weight:800}
 .hero p{font-size:18px;margin-top:18px;color:#f1f1f1;max-width:660px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-
 .btn{border:1px solid transparent;border-radius:4px;padding:13px 22px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:750;cursor:pointer;transition:.2s}
 .btn-light{background:#fff;color:#202327}
 .btn-light:hover{background:#e9eaeb}
@@ -47,31 +43,26 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
 .btn-dark:hover{background:#111315}
 .hero-facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:#f1f1f1}
 .hero-facts span:before{content:"✓";font-weight:900;margin-right:8px}
-
 .enquiry-tab{position:fixed;right:0;top:43%;z-index:18;background:#25282c;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);padding:18px 12px;border-radius:0 5px 5px 0;font-weight:750;letter-spacing:.2px;box-shadow:0 4px 14px #0002}
 .float-actions{position:fixed;right:20px;bottom:24px;z-index:18;display:grid;gap:10px}
 .float-actions a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-size:23px;box-shadow:0 5px 16px #0002}
 .float-actions a:hover{transform:translateY(-2px)}
-
 .trust{position:relative;z-index:2;margin:-44px auto 0;width:min(1100px,calc(100% - 40px));background:#25282c;color:#fff;display:grid;grid-template-columns:repeat(3,1fr);box-shadow:0 14px 30px #0002}
 .trust article{display:flex;align-items:center;gap:18px;padding:24px 30px;border-right:1px solid #ffffff30}
 .trust article:last-child{border:0}
 .trust-icon{font-size:27px;color:#ddd}
 .trust strong{font-size:18px;display:block}
 .trust small{color:#d0d2d4;font-size:13px}
-
 .section{padding:82px 0}
 .section-label{text-transform:uppercase;letter-spacing:1.8px;color:#777e84;font-size:12px;font-weight:800}
 .section-title{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-1px;margin:8px 0 14px}
 .section-title:after{content:"";display:block;width:58px;height:4px;background:#25282c;margin-top:18px}
-
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
 .about-copy p{color:#626970;margin-top:16px;line-height:1.85}
 .about-photo{min-height:410px;border-radius:4px;background:#e7e8e9 url("https://www.omshreesaiservice.in/images/single-img-one.jpg") center/cover no-repeat;box-shadow:var(--shadow)}
 .about-buttons{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
 .outline-dark{background:#fff;color:#25282c;border-color:#25282c}
 .outline-dark:hover{background:#f2f3f4}
-
 .services-section{background:#f4f5f6 url("https://www.omshreesaiservice.in/images/bg-pattern.png") center/auto repeat}
 .section-heading{text-align:center;margin:0 auto 38px}
 .section-heading .section-title:after{margin:17px auto 0}
@@ -86,20 +77,18 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
 .service-actions{display:flex;gap:8px;margin-top:16px}
 .service-actions .btn{flex:1;padding:10px 8px;font-size:14px}
 .rating{margin:7px 0 0;color:var(--gold);font-size:15px;letter-spacing:2px}
-
 .brands{background:#292c30;padding:40px 0;color:white}
 .brands h2{text-align:center;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#d8dadd;margin-bottom:24px}
 .brand-row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
 .brand-row img{width:170px;height:88px;object-fit:contain;background:#fff;padding:16px}
-
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
 .why-copy p{color:#626970;margin:17px 0}
 .why-list{list-style:none;display:grid;gap:12px;margin-top:20px}
 .why-list li:before{content:"›";font-weight:900;font-size:22px;margin-right:12px}
 .why-photo{width:100%;height:390px;object-fit:cover}
-
 .gallery-section{background:#f5f6f7}
-
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;background:#e1e3e5}
 .contact-section{background:#252a30;color:#fff}
 .contact-section .section-label{color:#c5c9ce}
 .contact-section .section-title:after{background:#fff}
@@ -113,7 +102,6 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
 .footer{background:#1b1e22;color:#c9cdd1;padding:20px 0}
 .footer-row{display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:13px}
 .footer strong{color:#fff}
-
 .modal-backdrop{position:fixed;inset:0;z-index:40;background:#101214bb;display:none;align-items:center;justify-content:center;padding:18px}
 .modal-backdrop.open{display:flex}
 .modal{background:#fff;width:min(450px,100%);padding:30px;border-radius:8px;position:relative;box-shadow:0 22px 70px #0004}
@@ -124,7 +112,6 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
 .modal input,.modal textarea{width:100%;border:1px solid #d7dade;border-radius:5px;padding:11px;outline-color:#555}
 .modal textarea{min-height:88px;resize:vertical}
 .modal .btn{width:100%;margin-top:17px}
-
 @media(max-width:900px){
   .navlinks{gap:18px}
   .navlinks a{font-size:14px}
@@ -136,8 +123,8 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
   .service-photo{height:205px}
   .service-info h3{font-size:17px}
   .service-actions{flex-direction:column}
+  .gallery-grid img{height:180px}
 }
-
 @media(max-width:650px){
   .wrap{width:calc(100% - 30px)}
   .announce{height:34px;font-size:11px}
@@ -160,6 +147,8 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
   .service-grid{grid-template-columns:1fr;gap:18px}
   .service-photo{height:235px}
   .service-actions{flex-direction:row}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:9px}
+  .gallery-grid img{height:145px}
   .brands{padding:30px 0}
   .brand-row{gap:10px}
   .brand-row img{width:calc(50% - 6px);height:70px;padding:12px}
@@ -376,7 +365,17 @@ header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0
       <div class="section-heading">
         <span class="section-label">Our work</span>
         <h2 class="section-title">Appliance Care at Your Doorstep</h2>
-        <p>Your service photos can be added here.</p>
+        <p>A look at our appliance services and work.</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="machine.jpeg" alt="Washing machine repair work" loading="lazy">
+        <img src="front-load.jpeg" alt="Front load washing machine service" loading="lazy">
+        <img src="top-load-machine.jpeg" alt="Top load washing machine service" loading="lazy">
+        <img src="top-load.jpeg" alt="Top load washing machine" loading="lazy">
+        <img src="purifier.jpeg" alt="Water purifier repair" loading="lazy">
+        <img src="water-purifier.jpeg" alt="Water purifier service" loading="lazy">
+        <img src="water.jpeg" alt="Water purifier service work" loading="lazy">
+        <img src="waterguard.jpeg" alt="Water purifier maintenance" loading="lazy">
       </div>
     </div>
   </section>
