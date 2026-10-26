@@ -6,448 +6,420 @@
 <title>Om Shree Sai Service</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
-background:#f5f9ff;
-color:#333;
-}
-  .inquiry-banner{
-background:linear-gradient(135deg,#0056d6,#4da3ff);
-color:white;
-text-align:center;
-padding:50px 20px;
-border-radius:15px;
-margin:40px auto;
-max-width:1200px;
+body {
+  background: #f0fdfa;
+  color: #183b3a;
 }
 
-.inquiry-banner{
-background:linear-gradient(135deg,#0056d6,#4da3ff);
-color:white;
-text-align:center;
-padding:50px 20px;
-border-radius:20px;
-margin:40px auto;
-max-width:1200px;
+/* Navigation */
+nav {
+  background: #134e4a;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.inquiry-banner h2{
-color:white;
-font-size:32px;
-margin-bottom:15px;
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.inquiry-banner p{
-font-size:18px;
-margin-bottom:25px;
-color:white;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-.inq-btn{
-display:inline-block;
-background:white;
-color:#0056d6;
-padding:12px 25px;
-margin:5px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-@media(max-width:768px){
-
-.inquiry-banner h2{
-font-size:24px;
+nav ul li a:hover {
+  color: #fbbf24;
 }
 
-.inquiry-banner p{
-font-size:16px;
+/* Hero */
+header {
+  background:
+    linear-gradient(rgba(19, 78, 74, .82), rgba(15, 118, 110, .78)),
+    url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
 }
 
-.inq-btn{
-display:block;
-width:220px;
-margin:10px auto;
+header h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
 }
 
+header p {
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
-/* NAVIGATION */
-
-nav{
-background:#0056d6;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: #134e4a;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 5px;
 }
 
-.logo{
-color:white;
-font-size:24px;
-font-weight:bold;
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-nav ul{
-list-style:none;
-display:flex;
-gap:25px;
+h2 {
+  text-align: center;
+  color: #0f766e;
+  margin-bottom: 30px;
 }
 
-nav ul li a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+.about {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.8;
+  text-align: center;
 }
 
-nav ul li a:hover{
-color:#ffd700;
+/* Inquiry banner */
+.inquiry-banner {
+  background: linear-gradient(135deg, #134e4a, #0f766e);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
-/* HEADER */
-
-header{
-background:linear-gradient(rgba(0,91,214,.8),rgba(77,163,255,.8)),
-url('images/banner.jpg');
-background-size:cover;
-background-position:center;
-color:white;
-text-align:center;
-padding:120px 20px;
+.inquiry-banner h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-header h1{
-font-size:50px;
-margin-bottom:15px;
+.inquiry-banner p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: white;
 }
 
-header p{
-font-size:22px;
-margin-bottom:20px;
+.inq-btn {
+  display: inline-block;
+  background: white;
+  color: #134e4a;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:white;
-color:#0056d6;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-margin:5px;
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* SECTIONS */
-
-section{
-padding:60px 20px;
-max-width:1200px;
-margin:auto;
+.card {
+  background: white;
+  padding: 25px;
+  border: 1px solid #d7eeea;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(19, 78, 74, .09);
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
 }
 
-h2{
-text-align:center;
-color:#0056d6;
-margin-bottom:30px;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.about{
-max-width:900px;
-margin:auto;
-line-height:1.8;
-text-align:center;
+.service-book {
+  display: inline-block;
+  background: #f59e0b;
+  color: #183b3a;
+  padding: 11px 18px;
+  border-radius: 24px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.service-book:hover {
+  background: #fbbf24;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+/* Contact */
+.contact {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  line-height: 2;
 }
 
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-display:block;
+/* Footer */
+footer {
+  background: #134e4a;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-/* CONTACT */
-
-.contact{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-line-height:2;
+/* Floating WhatsApp booking button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* FOOTER */
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
 
-footer{
-background:#0056d6;
-color:white;
-text-align:center;
-padding:20px;
-}
+  .logo {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
 
-/* WHATSAPP */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
+  header h1 {
+    font-size: 35px;
+  }
 
-/* MOBILE */
+  header p {
+    font-size: 18px;
+  }
 
-@media(max-width:768px){
+  .inquiry-banner h2 {
+    font-size: 24px;
+  }
 
-nav{
-flex-direction:column;
-}
+  .inquiry-banner p {
+    font-size: 16px;
+  }
 
-.logo{
-margin-bottom:10px;
-font-size:20px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-gap:12px;
-}
-
-header h1{
-font-size:35px;
-}
-
-header p{
-font-size:18px;
-}
-
+  .inq-btn {
+    display: block;
+    width: 220px;
+    margin: 10px auto;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<div class="logo">OM SHREE SAI SERVICE</div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <div class="logo">OM SHREE SAI SERVICE</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <header id="home">
-
-<h1>OM SHREE SAI SERVICE</h1>
-
-<p>Water Purifier & Washing Machine Repair Services</p>
-
-<a href="tel:+918929813910" class="btn">Call Now</a>
-
-<a href="https://wa.me/919167371571" class="btn">WhatsApp</a>
-
+  <h1>OM SHREE SAI SERVICE</h1>
+  <p>Water Purifier &amp; Washing Machine Repair Services</p>
+  <a href="tel:+918929813910" class="btn">Call Now</a>
+  <a href="https://wa.me/919167371571" class="btn">WhatsApp</a>
 </header>
-  
-  <section class="inquiry-banner">
-    <h2>Need Water Purifier or Washing Machine Repair?</h2>
-    <p>Get Fast Doorstep Service in Thane. Call or WhatsApp Now!</p>
 
-    <a href="tel:+918929813910" class="inq-btn">📞 Call Now</a>
-
-    <a href="https://wa.me/919167371571" class="inq-btn">💬 WhatsApp</a>
+<section class="inquiry-banner">
+  <h2>Need Water Purifier or Washing Machine Repair?</h2>
+  <p>Get Fast Doorstep Service in Thane. Call or WhatsApp Now!</p>
+  <a href="tel:+918929813910" class="inq-btn">📞 Call Now</a>
+  <a href="https://wa.me/919167371571" class="inq-btn">💬 WhatsApp</a>
 </section>
 
 <section id="about">
-
-<h2>About Us</h2>
-
-<div class="about">
-
-Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, Thane West.
-
-We specialize in Water Purifier Repair, RO Installation, AMC Maintenance, Filter Replacement, Washing Machine Repair, Front Load Repair, Top Load Repair, Automatic and Semi Automatic Washing Machine Service.
-
-We provide quick doorstep service, genuine spare parts and affordable pricing.
-
-</div>
-
+  <h2>About Us</h2>
+  <div class="about">
+    Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, Thane West.
+    We specialize in Water Purifier Repair, RO Installation, AMC Maintenance, Filter Replacement,
+    Washing Machine Repair, Front Load Repair, Top Load Repair, Automatic and Semi Automatic
+    Washing Machine Service. We provide quick doorstep service, genuine spare parts and affordable pricing.
+  </div>
 </section>
 
 <section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
 
-<h2>Our Services</h2>
+    <div class="card">
+      <span>Water Purifier Sales</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Water%20Purifier%20Sales">Book this service</a>
+    </div>
 
-<div class="services">
+    <div class="card">
+      <span>Water Purifier Repair</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Water%20Purifier%20Repair">Book this service</a>
+    </div>
 
-<div class="card">Water Purifier Sales</div>
+    <div class="card">
+      <span>RO Installation</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20RO%20Installation">Book this service</a>
+    </div>
 
-<div class="card">Water Purifier Repair</div>
+    <div class="card">
+      <span>AMC Maintenance</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20AMC%20Maintenance">Book this service</a>
+    </div>
 
-<div class="card">RO Installation</div>
+    <div class="card">
+      <span>Filter Replacement</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Filter%20Replacement">Book this service</a>
+    </div>
 
-<div class="card">AMC Maintenance</div>
+    <div class="card">
+      <span>Water Purifier Parts</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Water%20Purifier%20Parts">Book this service</a>
+    </div>
 
-<div class="card">Filter Replacement</div>
+    <div class="card">
+      <span>Front Load Washing Machine Repair</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Front%20Load%20Washing%20Machine%20Repair">Book this service</a>
+    </div>
 
-<div class="card">Water Purifier Parts</div>
+    <div class="card">
+      <span>Top Load Washing Machine Service</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Top%20Load%20Washing%20Machine%20Service">Book this service</a>
+    </div>
 
-<div class="card">Front Load Washing Machine Repair</div>
+    <div class="card">
+      <span>Automatic Washing Machine Service</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Automatic%20Washing%20Machine%20Service">Book this service</a>
+    </div>
 
-<div class="card">Top Load Washing Machine Service</div>
+    <div class="card">
+      <span>Semi Automatic Washing Machine Service</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Semi%20Automatic%20Washing%20Machine%20Service">Book this service</a>
+    </div>
 
-<div class="card">Automatic Washing Machine Service</div>
+    <div class="card">
+      <span>Washing Machine Parts</span>
+      <a class="service-book" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20book%3A%20Washing%20Machine%20Parts">Book this service</a>
+    </div>
 
-<div class="card">Semi Automatic Washing Machine Service</div>
-
-<div class="card">Washing Machine Parts</div>
-
-</div>
-
+  </div>
 </section>
 
 <section id="gallery">
-
-<h2>Our Work Gallery</h2>
-
-<div class="gallery">
-
-<img src="./machine.jpeg">
-
-<img src="./top-load-machine.jpeg">
-
-<img src="./top-load.jpeg">
-
-<img src="./front-load.jpeg">
-
-<img src="./purifier.jpeg">
-
-<img src="./water-purifier.jpeg">
-
-<img src="./water.jpeg">
-
-<img src="./waterguard.jpeg">
-
-</div>
-
+  <h2>Our Work Gallery</h2>
+  <div class="gallery">
+    <img src="./machine.jpeg" alt="Washing machine repair">
+    <img src="./top-load-machine.jpeg" alt="Top load washing machine repair">
+    <img src="./top-load.jpeg" alt="Top load washing machine service">
+    <img src="./front-load.jpeg" alt="Front load washing machine repair">
+    <img src="./purifier.jpeg" alt="Water purifier repair">
+    <img src="./water-purifier.jpeg" alt="Water purifier service">
+    <img src="./water.jpeg" alt="Water purifier service">
+    <img src="./waterguard.jpeg" alt="Water purifier service">
+  </div>
 </section>
 
 <section>
-
-<h2>Why Choose Us?</h2>
-
-<div class="services">
-
-<div class="card">Same Day Service</div>
-
-<div class="card">Experienced Technicians</div>
-
-<div class="card">Affordable Pricing</div>
-
-<div class="card">Doorstep Support</div>
-
-</div>
-
+  <h2>Why Choose Us?</h2>
+  <div class="services">
+    <div class="card">Same Day Service</div>
+    <div class="card">Experienced Technicians</div>
+    <div class="card">Affordable Pricing</div>
+    <div class="card">Doorstep Support</div>
+  </div>
 </section>
 
 <section>
-
-<h2>Customer Reviews</h2>
-
-<div class="services">
-
-<div class="card">⭐⭐⭐⭐⭐ Excellent Service</div>
-
-<div class="card">⭐⭐⭐⭐⭐ Quick RO Installation</div>
-
-<div class="card">⭐⭐⭐⭐⭐ Professional Technicians</div>
-
-</div>
-
+  <h2>Customer Reviews</h2>
+  <div class="services">
+    <div class="card">⭐⭐⭐⭐⭐ Excellent Service</div>
+    <div class="card">⭐⭐⭐⭐⭐ Quick RO Installation</div>
+    <div class="card">⭐⭐⭐⭐⭐ Professional Technicians</div>
+  </div>
 </section>
 
 <section id="contact">
-
-<h2>Contact Us</h2>
-
-<div class="contact">
-
-<p><strong>Phone:</strong> +91 8929813910</p>
-
-<p><strong>Phone:</strong> +91 9167371571</p>
-
-<p>
-<strong>Address:</strong><br>
-Shop No. 1, New Ganesh Nagar,<br>
-Kolshet Road, Opp. Silver Line,<br>
-Dhokali, Thane West
-</p>
-
-<p>
-<a href="https://goo.gl/maps/KgvA7ohJp7Htyg7s7">
-View Location on Google Maps
-</a>
-</p>
-
-</div>
-
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <p><strong>Phone:</strong> +91 8929813910</p>
+    <p><strong>Phone:</strong> +91 9167371571</p>
+    <p>
+      <strong>Address:</strong><br>
+      Shop No. 1, New Ganesh Nagar,<br>
+      Kolshet Road, Opp. Silver Line,<br>
+      Dhokali, Thane West
+    </p>
+    <p>
+      <a href="https://goo.gl/maps/KgvA7ohJp7Htyg7s7">View Location on Google Maps</a>
+    </p>
+  </div>
 </section>
 
 <footer>
-
-© 2026 Om Shree Sai Service. All Rights Reserved.
-
+  © 2026 Om Shree Sai Service. All Rights Reserved.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919167371571">
-📞 Book Service
-</a>
+<a class="whatsapp" href="https://wa.me/919167371571">📞 Book Service</a>
 
 </body>
 </html>
