@@ -10,81 +10,483 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--black);line-height:1.6;background:#fff;overflow-x:hidden}
-a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
-.announce{height:38px;background:#202327;color:#fff;font-size:13px}.announce .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}.announce a{font-weight:700}
-header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0 4px 18px #0000000b}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{color:#202327;font-weight:950;font-size:27px;line-height:.91;letter-spacing:-1.1px;text-align:center}.brand span{display:block}.brand small{display:block;font-size:13px;letter-spacing:2.1px;margin-top:6px}
-.navlinks{display:flex;align-items:center;gap:36px;font-weight:700;font-size:15px}.navlinks a{padding:34px 0 30px;border-bottom:3px solid transparent}.navlinks a:hover,.navlinks a.active{border-color:#22262a;color:#111}
-.navright{display:flex;align-items:center;gap:10px}.login{border:1px solid #d9dcdf;padding:10px 17px;border-radius:6px;background:#fff;font-weight:700;cursor:pointer}.login:hover{background:#f4f5f6}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
+
+.announce{height:38px;background:#202327;color:#fff;font-size:13px}
+.announce .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.announce a{font-weight:700}
+
+header{height:92px;background:#fff;position:sticky;top:0;z-index:15;box-shadow:0 4px 18px #0000000b}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{color:#202327;font-weight:950;font-size:27px;line-height:.91;letter-spacing:-1.1px;text-align:center}
+.brand span{display:block}
+.brand small{display:block;font-size:13px;letter-spacing:2.1px;margin-top:6px}
+.navlinks{display:flex;align-items:center;gap:36px;font-weight:700;font-size:15px}
+.navlinks a{padding:34px 0 30px;border-bottom:3px solid transparent}
+.navlinks a:hover,.navlinks a.active{border-color:#22262a;color:#111}
+.navright{display:flex;align-items:center;gap:10px}
+.login{border:1px solid #d9dcdf;padding:10px 17px;border-radius:6px;background:#fff;font-weight:700;cursor:pointer}
+.login:hover{background:#f4f5f6}
 .menu-btn{display:none;border:0;background:#f1f2f3;border-radius:6px;padding:9px 12px;font-size:20px}
+
 .hero{height:min(660px,70vw);min-height:500px;position:relative;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#101214c9 0%,#141619a6 48%,#1113158c 100%),url("https://www.omshreesaiservice.in/images/slides/slider-mainbg-001.jpg") center 46%/cover no-repeat}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#10121425,transparent 40%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;padding-top:20px}.hero-rule{width:66px;height:5px;background:#fff;margin-bottom:20px}
+.hero-inner{position:relative;z-index:1;padding-top:20px}
+.hero-rule{width:66px;height:5px;background:#fff;margin-bottom:20px}
 .hero h1{font-size:clamp(46px,6vw,78px);line-height:1.1;letter-spacing:-2px;max-width:850px;font-weight:800}
 .hero p{font-size:18px;margin-top:18px;color:#f1f1f1;max-width:660px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
 .btn{border:1px solid transparent;border-radius:4px;padding:13px 22px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:750;cursor:pointer;transition:.2s}
-.btn-light{background:#fff;color:#202327}.btn-light:hover{background:#e9eaeb}.btn-ghost{background:transparent;border-color:#ffffffbb;color:#fff}.btn-dark{background:#25292d;color:#fff}.btn-dark:hover{background:#111315}
-.hero-facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:#f1f1f1}.hero-facts span:before{content:"✓";font-weight:900;margin-right:8px}
+.btn-light{background:#fff;color:#202327}
+.btn-light:hover{background:#e9eaeb}
+.btn-ghost{background:transparent;border-color:#ffffffbb;color:#fff}
+.btn-dark{background:#25292d;color:#fff}
+.btn-dark:hover{background:#111315}
+.hero-facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:#f1f1f1}
+.hero-facts span:before{content:"✓";font-weight:900;margin-right:8px}
+
 .enquiry-tab{position:fixed;right:0;top:43%;z-index:18;background:#25282c;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);padding:18px 12px;border-radius:0 5px 5px 0;font-weight:750;letter-spacing:.2px;box-shadow:0 4px 14px #0002}
-.float-actions{position:fixed;right:20px;bottom:24px;z-index:18;display:grid;gap:10px}.float-actions a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-size:23px;box-shadow:0 5px 16px #0002}.float-actions a:hover{transform:translateY(-2px)}
+.float-actions{position:fixed;right:20px;bottom:24px;z-index:18;display:grid;gap:10px}
+.float-actions a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-size:23px;box-shadow:0 5px 16px #0002}
+.float-actions a:hover{transform:translateY(-2px)}
+
 .trust{position:relative;z-index:2;margin:-44px auto 0;width:min(1100px,calc(100% - 40px));background:#25282c;color:#fff;display:grid;grid-template-columns:repeat(3,1fr);box-shadow:0 14px 30px #0002}
-.trust article{display:flex;align-items:center;gap:18px;padding:24px 30px;border-right:1px solid #ffffff30}.trust article:last-child{border:0}.trust-icon{font-size:27px;color:#ddd}.trust strong{font-size:18px;display:block}.trust small{color:#d0d2d4;font-size:13px}
-.section{padding:82px 0}.section-label{text-transform:uppercase;letter-spacing:1.8px;color:#777e84;font-size:12px;font-weight:800}.section-title{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-1px;margin:8px 0 14px}.section-title:after{content:"";display:block;width:58px;height:4px;background:#25282c;margin-top:18px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}.about-copy p{color:#626970;margin-top:16px;line-height:1.85}.about-photo{min-height:410px;border-radius:4px;background:#e7e8e9 url("https://www.omshreesaiservice.in/images/single-img-one.jpg") center/cover no-repeat;box-shadow:var(--shadow)}
-.about-buttons{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}.outline-dark{background:#fff;color:#25282c;border-color:#25282c}.outline-dark:hover{background:#f2f3f4}
+.trust article{display:flex;align-items:center;gap:18px;padding:24px 30px;border-right:1px solid #ffffff30}
+.trust article:last-child{border:0}
+.trust-icon{font-size:27px;color:#ddd}
+.trust strong{font-size:18px;display:block}
+.trust small{color:#d0d2d4;font-size:13px}
+
+.section{padding:82px 0}
+.section-label{text-transform:uppercase;letter-spacing:1.8px;color:#777e84;font-size:12px;font-weight:800}
+.section-title{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-1px;margin:8px 0 14px}
+.section-title:after{content:"";display:block;width:58px;height:4px;background:#25282c;margin-top:18px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.about-copy p{color:#626970;margin-top:16px;line-height:1.85}
+.about-photo{min-height:410px;border-radius:4px;background:#e7e8e9 url("https://www.omshreesaiservice.in/images/single-img-one.jpg") center/cover no-repeat;box-shadow:var(--shadow)}
+.about-buttons{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.outline-dark{background:#fff;color:#25282c;border-color:#25282c}
+.outline-dark:hover{background:#f2f3f4}
+
 .services-section{background:#f4f5f6 url("https://www.omshreesaiservice.in/images/bg-pattern.png") center/auto repeat}
-.section-heading{text-align:center;margin:0 auto 38px}.section-heading .section-title:after{margin:17px auto 0}
+.section-heading{text-align:center;margin:0 auto 38px}
+.section-heading .section-title:after{margin:17px auto 0}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .service-card{background:#fff;box-shadow:0 6px 22px #2023270d;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .service-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px #2023271b}
-.service-photo{height:245px;overflow:hidden;background:#ddd}.service-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.service-card:hover img{transform:scale(1.04)}
+.service-photo{height:245px;overflow:hidden;background:#ddd}
+.service-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.service-card:hover img{transform:scale(1.04)}
 .service-info{padding:18px 20px 20px;text-align:center;border-bottom:3px solid #25282c;flex:1;display:flex;flex-direction:column}
-.service-info h3{font-size:20px;line-height:1.3;min-height:52px}.service-actions{display:flex;gap:8px;margin-top:16px}.service-actions .btn{flex:1;padding:10px 8px;font-size:14px}
+.service-info h3{font-size:20px;line-height:1.3;min-height:52px}
+.service-actions{display:flex;gap:8px;margin-top:16px}
+.service-actions .btn{flex:1;padding:10px 8px;font-size:14px}
 .rating{margin:7px 0 0;color:var(--gold);font-size:15px;letter-spacing:2px}
-.brands{background:#292c30;padding:40px 0;color:white}.brands h2{text-align:center;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#d8dadd;margin-bottom:24px}
-.brand-row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}.brand-row img{width:170px;height:88px;object-fit:contain;background:#fff;padding:16px}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.why-copy p{color:#626970;margin:17px 0}.why-list{list-style:none;display:grid;gap:12px;margin-top:20px}.why-list li:before{content:"›";font-weight:900;font-size:22px;margin-right:12px}.why-photo{width:100%;height:390px;object-fit:cover}
+
+.brands{background:#292c30;padding:40px 0;color:white}
+.brands h2{text-align:center;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#d8dadd;margin-bottom:24px}
+.brand-row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.brand-row img{width:170px;height:88px;object-fit:contain;background:#fff;padding:16px}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.why-copy p{color:#626970;margin:17px 0}
+.why-list{list-style:none;display:grid;gap:12px;margin-top:20px}
+.why-list li:before{content:"›";font-weight:900;font-size:22px;margin-right:12px}
+.why-photo{width:100%;height:390px;object-fit:cover}
+
 .gallery-section{background:#f5f6f7}
-.contact-section{background:#252a30;color:#fff}.contact-section .section-label{color:#c5c9ce}.contact-section .section-title:after{background:#fff}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;margin-top:34px}.map-box{min-height:320px;background:#353b42;display:flex;align-items:center;justify-content:center;overflow:hidden}.map-box iframe{border:0;width:100%;height:320px;filter:grayscale(1)}.contact-info h3{font-size:20px;margin:4px 0 14px}.contact-line{margin:18px 0;color:#e0e3e6}.contact-line strong{display:block;font-size:18px;color:#fff}.contact-info .btn{margin-top:12px}.footer{background:#1b1e22;color:#c9cdd1;padding:20px 0}.footer-row{display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:13px}.footer strong{color:#fff}
-.modal-backdrop{position:fixed;inset:0;z-index:40;background:#101214bb;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{background:#fff;width:min(450px,100%);padding:30px;border-radius:8px;position:relative;box-shadow:0 22px 70px #0004}.modal h2{font-size:25px}.modal p{color:#697078;margin:5px 0 18px}.close{position:absolute;right:13px;top:12px;border:0;background:#eee;border-radius:50%;width:34px;height:34px;font-size:21px;cursor:pointer}.modal label{display:block;font-weight:700;font-size:13px;margin:13px 0 5px}.modal input,.modal textarea{width:100%;border:1px solid #d7dade;border-radius:5px;padding:11px;outline-color:#555}.modal textarea{min-height:88px;resize:vertical}.modal .btn{width:100%;margin-top:17px}
-@media(max-width:900px){.navlinks{gap:18px}.navlinks a{font-size:14px}.navright .login{display:none}.hero{height:600px}.trust article{padding:20px 17px}.trust strong{font-size:16px}.about-grid,.why-grid{gap:30px}.service-photo{height:205px}.service-info h3{font-size:17px}.service-actions{flex-direction:column}}
-@media(max-width:650px){.wrap{width:calc(100% - 30px)}.announce{height:34px;font-size:11px}.brand{font-size:21px}.brand small{font-size:10px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:92px;left:0;right:0;background:#fff;box-shadow:0 12px 20px #0002;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px}.navlinks.show{display:flex}.navlinks a{padding:12px 5px;border-bottom:1px solid #eee}.hero{min-height:520px;height:auto;padding:68px 0;background-position:57% center}.hero h1{font-size:45px;letter-spacing:-1px}.hero p{font-size:16px}.trust{grid-template-columns:1fr;margin-top:-28px}.trust article{border-right:0;border-bottom:1px solid #ffffff30;padding:15px 20px}.trust article:last-child{border-bottom:0}.trust-icon{font-size:23px}.section{padding:56px 0}.about-grid,.why-grid,.contact-grid{grid-template-columns:1fr}.about-photo{min-height:290px;order:-1}.service-grid{grid-template-columns:1fr;gap:18px}.service-photo{height:235px}.service-actions{flex-direction:row}.brands{padding:30px 0}.brand-row{gap:10px}.brand-row img{width:calc(50% - 6px);height:70px;padding:12px}.why-photo{height:290px}.map-box,.map-box iframe{min-height:270px;height:270px}.footer-row{flex-direction:column;text-align:center}.float-actions{right:12px;bottom:12px}.float-actions a{width:48px;height:48px}.enquiry-tab{top:40%}}
+
+.contact-section{background:#252a30;color:#fff}
+.contact-section .section-label{color:#c5c9ce}
+.contact-section .section-title:after{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;margin-top:34px}
+.map-box{min-height:320px;background:#353b42;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.map-box iframe{border:0;width:100%;height:320px;filter:grayscale(1)}
+.contact-info h3{font-size:20px;margin:4px 0 14px}
+.contact-line{margin:18px 0;color:#e0e3e6}
+.contact-line strong{display:block;font-size:18px;color:#fff}
+.contact-info .btn{margin-top:12px}
+.footer{background:#1b1e22;color:#c9cdd1;padding:20px 0}
+.footer-row{display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:13px}
+.footer strong{color:#fff}
+
+.modal-backdrop{position:fixed;inset:0;z-index:40;background:#101214bb;display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;width:min(450px,100%);padding:30px;border-radius:8px;position:relative;box-shadow:0 22px 70px #0004}
+.modal h2{font-size:25px}
+.modal p{color:#697078;margin:5px 0 18px}
+.close{position:absolute;right:13px;top:12px;border:0;background:#eee;border-radius:50%;width:34px;height:34px;font-size:21px;cursor:pointer}
+.modal label{display:block;font-weight:700;font-size:13px;margin:13px 0 5px}
+.modal input,.modal textarea{width:100%;border:1px solid #d7dade;border-radius:5px;padding:11px;outline-color:#555}
+.modal textarea{min-height:88px;resize:vertical}
+.modal .btn{width:100%;margin-top:17px}
+
+@media(max-width:900px){
+  .navlinks{gap:18px}
+  .navlinks a{font-size:14px}
+  .navright .login{display:none}
+  .hero{height:600px}
+  .trust article{padding:20px 17px}
+  .trust strong{font-size:16px}
+  .about-grid,.why-grid{gap:30px}
+  .service-photo{height:205px}
+  .service-info h3{font-size:17px}
+  .service-actions{flex-direction:column}
+}
+
+@media(max-width:650px){
+  .wrap{width:calc(100% - 30px)}
+  .announce{height:34px;font-size:11px}
+  .brand{font-size:21px}
+  .brand small{font-size:10px}
+  .menu-btn{display:block}
+  .navlinks{display:none;position:absolute;top:92px;left:0;right:0;background:#fff;box-shadow:0 12px 20px #0002;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px}
+  .navlinks.show{display:flex}
+  .navlinks a{padding:12px 5px;border-bottom:1px solid #eee}
+  .hero{min-height:520px;height:auto;padding:68px 0;background-position:57% center}
+  .hero h1{font-size:45px;letter-spacing:-1px}
+  .hero p{font-size:16px}
+  .trust{grid-template-columns:1fr;margin-top:-28px}
+  .trust article{border-right:0;border-bottom:1px solid #ffffff30;padding:15px 20px}
+  .trust article:last-child{border-bottom:0}
+  .trust-icon{font-size:23px}
+  .section{padding:56px 0}
+  .about-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .about-photo{min-height:290px;order:-1}
+  .service-grid{grid-template-columns:1fr;gap:18px}
+  .service-photo{height:235px}
+  .service-actions{flex-direction:row}
+  .brands{padding:30px 0}
+  .brand-row{gap:10px}
+  .brand-row img{width:calc(50% - 6px);height:70px;padding:12px}
+  .why-photo{height:290px}
+  .map-box,.map-box iframe{min-height:270px;height:270px}
+  .footer-row{flex-direction:column;text-align:center}
+  .float-actions{right:12px;bottom:12px}
+  .float-actions a{width:48px;height:48px}
+  .enquiry-tab{top:40%}
+}
 </style>
 </head>
 <body>
-<div class="announce"><div class="wrap"><span>Welcome to Om Shree Sai Services</span><a href="tel:+918929813910">+91 89298 13910</a></div></div>
-<header><nav class="nav wrap"><a class="brand" href="#home" aria-label="Om Shree Sai Services home"><span>OM SHREE SAI</span><small>SERVICES</small></a><div class="navlinks" id="navlinks"><a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#contact">Contact Us</a></div><div class="navright"><button class="login" onclick="openModal('loginModal')">Log in</button><button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button></div></nav></header>
+
+<div class="announce">
+  <div class="wrap">
+    <span>Welcome to Om Shree Sai Services</span>
+    <a href="tel:+918929813910">+91 89298 13910</a>
+  </div>
+</div>
+
+<header>
+  <nav class="nav wrap">
+    <a class="brand" href="#home" aria-label="Om Shree Sai Services home">
+      <span>OM SHREE SAI</span>
+      <small>SERVICES</small>
+    </a>
+    <div class="navlinks" id="navlinks">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="navright">
+      <button class="login" onclick="openModal('loginModal')">Log in</button>
+      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+</header>
+
 <main id="home">
-<section class="hero"><div class="wrap hero-inner"><div class="hero-rule"></div><h1>Reliable Repairs,<br>Right at Your Doorstep!</h1><p>Professional washing machine repair and maintenance in Dhokali, Thane West. Fast, affordable and trusted appliance care from our local team.</p><div class="hero-actions"><a class="btn btn-light" href="#services">Explore Services <span>→</span></a><a class="btn btn-ghost" href="tel:+918929813910">Call +91 89298 13910</a></div><div class="hero-facts"><span>Trusted local technicians</span><span>Convenient doorstep visits</span><span>Friendly local support</span></div></div></section>
-<a class="enquiry-tab" href="#contact" onclick="openModal('enquiryModal');return false">Enquiry Now</a>
-<div class="float-actions"><a href="tel:+918929813910" aria-label="Call us">☎</a><a href="https://wa.me/919167371571" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a></div>
-<section class="trust"><article><div class="trust-icon">✧</div><div><strong>Trusted Services</strong><small>We are trusted by our customers</small></div></article><article><div class="trust-icon">☎</div><div><strong>Call Support</strong><small>+91 8929813910</small></div></article><article><div class="trust-icon">♙</div><div><strong>Expert &amp; Professional</strong><small>Care from experienced technicians</small></div></article></section>
-<section class="section" id="about"><div class="wrap about-grid"><div class="about-copy"><span class="section-label">About us · Dhokali, Thane West</span><h2 class="section-title">Welcome to Om Shree Sai Services</h2><p>Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, Thane West. We specialize in repair and maintenance for washing machines, including front load, top load, automatic and semi-automatic models.</p><p>Our experienced technicians use reliable tools and genuine spare parts to deliver prompt, professional doorstep service. We aim to restore convenience with honest, affordable repair solutions and friendly local support.</p><div class="about-buttons"><a class="btn btn-dark" href="#contact">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div><div class="about-photo" role="img" aria-label="Technician working on a home appliance"></div></div></section>
-<section class="section services-section" id="services"><div class="wrap"><div class="section-heading"><span class="section-label">Professional appliance care</span><h2 class="section-title">Our Services</h2><p>Choose a service and book directly with our team.</p></div><div class="service-grid">
-<article class="service-card"><div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/03.jpg" alt="Washing machine repair service"></div><div class="service-info"><h3>Washing Machine Repair Service</h3><div class="rating" aria-label="Five stars">★★★★★</div><div class="service-actions"><a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Washing%20Machine%20Repair%20Service" target="_blank" rel="noopener">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/04.jpg" alt="Front load washing machine repair"></div><div class="service-info"><h3>Front Load Washing Machine Repair</h3><div class="rating" aria-label="Five stars">★★★★★</div><div class="service-actions"><a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Front%20Load%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/05.jpg" alt="Top load washing machine repair"></div><div class="service-info"><h3>Top Load Washing Machine Repair</h3><div class="rating" aria-label="Five stars">★★★★★</div><div class="service-actions"><a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Top%20Load%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/06.jpg" alt="Automatic washing machine repair"></div><div class="service-info"><h3>Automatic Washing Machine Repair</h3><div class="rating" aria-label="Five stars">★★★★★</div><div class="service-actions"><a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Automatic%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/07.jpg" alt="Semi-automatic washing machine repair"></div><div class="service-info"><h3>Semi-Automatic Washing Machine Repair</h3><div class="rating" aria-label="Five stars">★★★★★</div><div class="service-actions"><a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Semi-Automatic%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/03.jpg" alt="Home appliance parts and service"></div><div class="service-info"><h3>Washing Machine Parts &amp; Maintenance</h3><div class="rating" aria-label="Five stars">★★★★★</div><div class="service-actions"><a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Washing%20Machine%20Parts%20and%20Maintenance" target="_blank" rel="noopener">Enquire Now</a><a class="btn outline-dark" href="tel:+918929813910">Call Now</a></div></div></article>
-</div></div></section>
-<section class="brands"><div class="wrap"><h2>We service leading appliance brands</h2><div class="brand-row"><img src="https://www.omshreesaiservice.in/images/client/1.jpg" alt="Appliance brand"><img src="https://www.omshreesaiservice.in/images/client/2.jpg" alt="Appliance brand"><img src="https://www.omshreesaiservice.in/images/client/3.jpg" alt="Appliance brand"><img src="https://www.omshreesaiservice.in/images/client/4.jpg" alt="Appliance brand"><img src="https://www.omshreesaiservice.in/images/client/5.jpg" alt="Appliance brand"></div></div></section>
-<section class="section"><div class="wrap why-grid"><div class="why-copy"><span class="section-label">Why choose us</span><h2 class="section-title">Trusted Service.<br>Guaranteed Satisfaction.</h2><p>Reliable service, skilled technicians, genuine spare parts and prompt doorstep support. We work to make every repair straightforward and dependable.</p><ul class="why-list"><li>Expert technicians</li><li>Fast and reliable service</li><li>High-quality parts</li><li>Affordable rates</li><li>Customer satisfaction</li></ul></div><img class="why-photo" src="https://www.omshreesaiservice.in/images/why-us.jpg" alt="Technician repairing a washing machine"></div></section>
-<section class="section gallery-section" id="our-work"><div class="wrap"><div class="section-heading"><span class="section-label">Our work</span><h2 class="section-title">Appliance Care at Your Doorstep</h2><p>Your service photos can be added here.</p></div></div></section>
-<section class="section contact-section" id="contact"><div class="wrap"><span class="section-label">Get in touch</span><h2 class="section-title">Our Location &amp; Contact</h2><div class="contact-grid"><div class="map-box"><iframe title="Map to Om Shree Sai Services, Dhokali, Thane" loading="lazy" src="https://www.google.com/maps?q=Om%20Shree%20Sai%20Services%20Dhokali%20Thane&output=embed"></iframe></div><div class="contact-info"><h3>GET IN TOUCH</h3><div class="contact-line"><strong>☎ Call for Support</strong><a href="tel:+918929813910">+91 89298 13910</a> / <a href="tel:+919167371571">+91 91673 71571</a></div><div class="contact-line"><strong>⌖ Location</strong>Shop No. 1, New Ganesh Nagar, Kolshet Road, Opp. Silver Line, Dhokali, Thane West</div><a class="btn btn-light" href="https://wa.me/919167371571" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div></div></section>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-rule"></div>
+      <h1>Reliable Repairs,<br>Right at Your Doorstep!</h1>
+      <p>Professional washing machine repair and maintenance in Dhokali, Thane West. Fast, affordable and trusted appliance care from our local team.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#services">Explore Services <span>→</span></a>
+        <a class="btn btn-ghost" href="tel:+918929813910">Call +91 89298 13910</a>
+      </div>
+      <div class="hero-facts">
+        <span>Trusted local technicians</span>
+        <span>Convenient doorstep visits</span>
+        <span>Friendly local support</span>
+      </div>
+    </div>
+  </section>
+
+  <a class="enquiry-tab" href="#contact" onclick="openModal('enquiryModal');return false">Enquiry Now</a>
+
+  <div class="float-actions">
+    <a href="tel:+918929813910" aria-label="Call us">☎</a>
+    <a href="https://wa.me/919167371571" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+  </div>
+
+  <section class="trust">
+    <article>
+      <div class="trust-icon">✧</div>
+      <div><strong>Trusted Services</strong><small>We are trusted by our customers</small></div>
+    </article>
+    <article>
+      <div class="trust-icon">☎</div>
+      <div><strong>Call Support</strong><small>+91 8929813910</small></div>
+    </article>
+    <article>
+      <div class="trust-icon">♙</div>
+      <div><strong>Expert &amp; Professional</strong><small>Care from experienced technicians</small></div>
+    </article>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <span class="section-label">About us · Dhokali, Thane West</span>
+        <h2 class="section-title">Welcome to Om Shree Sai Services</h2>
+        <p>Om Shree Sai Services is your trusted home appliance repair expert located in Dhokali, Thane West. We specialize in repair and maintenance for washing machines, including front load, top load, automatic and semi-automatic models.</p>
+        <p>Our experienced technicians use reliable tools and genuine spare parts to deliver prompt, professional doorstep service. We aim to restore convenience with honest, affordable repair solutions and friendly local support.</p>
+        <div class="about-buttons">
+          <a class="btn btn-dark" href="#contact">Enquire Now</a>
+          <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+        </div>
+      </div>
+      <div class="about-photo" role="img" aria-label="Technician working on a home appliance"></div>
+    </div>
+  </section>
+
+  <section class="section services-section" id="services">
+    <div class="wrap">
+      <div class="section-heading">
+        <span class="section-label">Professional appliance care</span>
+        <h2 class="section-title">Our Services</h2>
+        <p>Choose a service and book directly with our team.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/03.jpg" alt="Washing machine repair service"></div>
+          <div class="service-info">
+            <h3>Washing Machine Repair Service</h3>
+            <div class="rating" aria-label="Five stars">★★★★★</div>
+            <div class="service-actions">
+              <a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Washing%20Machine%20Repair%20Service" target="_blank" rel="noopener">Enquire Now</a>
+              <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/04.jpg" alt="Front load washing machine repair"></div>
+          <div class="service-info">
+            <h3>Front Load Washing Machine Repair</h3>
+            <div class="rating" aria-label="Five stars">★★★★★</div>
+            <div class="service-actions">
+              <a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Front%20Load%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a>
+              <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/05.jpg" alt="Top load washing machine repair"></div>
+          <div class="service-info">
+            <h3>Top Load Washing Machine Repair</h3>
+            <div class="rating" aria-label="Five stars">★★★★★</div>
+            <div class="service-actions">
+              <a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Top%20Load%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a>
+              <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/06.jpg" alt="Automatic washing machine repair"></div>
+          <div class="service-info">
+            <h3>Automatic Washing Machine Repair</h3>
+            <div class="rating" aria-label="Five stars">★★★★★</div>
+            <div class="service-actions">
+              <a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Automatic%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a>
+              <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/07.jpg" alt="Semi-automatic washing machine repair"></div>
+          <div class="service-info">
+            <h3>Semi-Automatic Washing Machine Repair</h3>
+            <div class="rating" aria-label="Five stars">★★★★★</div>
+            <div class="service-actions">
+              <a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Semi-Automatic%20Washing%20Machine%20Repair" target="_blank" rel="noopener">Enquire Now</a>
+              <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo"><img src="https://www.omshreesaiservice.in/images/services/03.jpg" alt="Home appliance parts and service"></div>
+          <div class="service-info">
+            <h3>Washing Machine Parts &amp; Maintenance</h3>
+            <div class="rating" aria-label="Five stars">★★★★★</div>
+            <div class="service-actions">
+              <a class="btn btn-dark" href="https://wa.me/919167371571?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Washing%20Machine%20Parts%20and%20Maintenance" target="_blank" rel="noopener">Enquire Now</a>
+              <a class="btn outline-dark" href="tel:+918929813910">Call Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <div class="wrap">
+      <h2>We service leading appliance brands</h2>
+      <div class="brand-row">
+        <img src="https://www.omshreesaiservice.in/images/client/1.jpg" alt="Appliance brand">
+        <img src="https://www.omshreesaiservice.in/images/client/2.jpg" alt="Appliance brand">
+        <img src="https://www.omshreesaiservice.in/images/client/3.jpg" alt="Appliance brand">
+        <img src="https://www.omshreesaiservice.in/images/client/4.jpg" alt="Appliance brand">
+        <img src="https://www.omshreesaiservice.in/images/client/5.jpg" alt="Appliance brand">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap why-grid">
+      <div class="why-copy">
+        <span class="section-label">Why choose us</span>
+        <h2 class="section-title">Trusted Service.<br>Guaranteed Satisfaction.</h2>
+        <p>Reliable service, skilled technicians, genuine spare parts and prompt doorstep support. We work to make every repair straightforward and dependable.</p>
+        <ul class="why-list">
+          <li>Expert technicians</li>
+          <li>Fast and reliable service</li>
+          <li>High-quality parts</li>
+          <li>Affordable rates</li>
+          <li>Customer satisfaction</li>
+        </ul>
+      </div>
+      <img class="why-photo" src="https://www.omshreesaiservice.in/images/why-us.jpg" alt="Technician repairing a washing machine">
+    </div>
+  </section>
+
+  <section class="section gallery-section" id="our-work">
+    <div class="wrap">
+      <div class="section-heading">
+        <span class="section-label">Our work</span>
+        <h2 class="section-title">Appliance Care at Your Doorstep</h2>
+        <p>Your service photos can be added here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="wrap">
+      <span class="section-label">Get in touch</span>
+      <h2 class="section-title">Our Location &amp; Contact</h2>
+      <div class="contact-grid">
+        <div class="map-box">
+          <iframe title="Map to Om Shree Sai Services, Dhokali, Thane" loading="lazy" src="https://www.google.com/maps?q=Om%20Shree%20Sai%20Services%20Dhokali%20Thane&output=embed"></iframe>
+        </div>
+        <div class="contact-info">
+          <h3>GET IN TOUCH</h3>
+          <div class="contact-line">
+            <strong>☎ Call for Support</strong>
+            <a href="tel:+918929813910">+91 89298 13910</a> /
+            <a href="tel:+919167371571">+91 91673 71571</a>
+          </div>
+          <div class="contact-line">
+            <strong>⌖ Location</strong>
+            Shop No. 1, New Ganesh Nagar, Kolshet Road, Opp. Silver Line, Dhokali, Thane West
+          </div>
+          <a class="btn btn-light" href="https://wa.me/919167371571" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer"><div class="wrap footer-row"><strong>OM SHREE SAI SERVICES</strong><span>© 2026 Om Shree Sai Services. All rights reserved.</span><span>Dhokali, Thane West</span></div></footer>
-<div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" onclick="if(event.target===this)closeModal('loginModal')"><div class="modal"><button class="close" aria-label="Close" onclick="closeModal('loginModal')">×</button><h2 id="loginTitle">Welcome</h2><p>Enter your details and contact our team to arrange service.</p><form onsubmit="event.preventDefault();sendMessage('loginForm')"><label for="customerName">Your name</label><input id="customerName" name="name" placeholder="Your full name" required><label for="customerPhone">Mobile number</label><input id="customerPhone" name="phone" type="tel" placeholder="Your phone number" required><button class="btn btn-dark">Continue on WhatsApp</button></form></div></div>
-<div class="modal-backdrop" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="enquiryTitle" onclick="if(event.target===this)closeModal('enquiryModal')"><div class="modal"><button class="close" aria-label="Close" onclick="closeModal('enquiryModal')">×</button><h2 id="enquiryTitle">Request a callback</h2><p>Share your details and we’ll connect you with our service team.</p><form id="enquiryForm" onsubmit="submitEnquiry(event)"><label for="enquiryName">Your name</label><input id="enquiryName" name="name" placeholder="Enter your name" required><label for="enquiryPhone">Mobile number</label><input id="enquiryPhone" name="phone" type="tel" placeholder="Enter mobile number" required><label for="enquiryMessage">How can we help?</label><textarea id="enquiryMessage" name="message" placeholder="Tell us about your appliance"></textarea><button class="btn btn-dark">Send enquiry on WhatsApp</button></form></div></div>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <strong>OM SHREE SAI SERVICES</strong>
+    <span>© 2026 Om Shree Sai Services. All rights reserved.</span>
+    <span>Dhokali, Thane West</span>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" onclick="if(event.target===this)closeModal('loginModal')">
+  <div class="modal">
+    <button class="close" aria-label="Close" onclick="closeModal('loginModal')">×</button>
+    <h2 id="loginTitle">Welcome</h2>
+    <p>Enter your details and contact our team to arrange service.</p>
+    <form onsubmit="event.preventDefault();sendMessage('loginForm')">
+      <label for="customerName">Your name</label>
+      <input id="customerName" name="name" placeholder="Your full name" required>
+      <label for="customerPhone">Mobile number</label>
+      <input id="customerPhone" name="phone" type="tel" placeholder="Your phone number" required>
+      <button class="btn btn-dark">Continue on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="enquiryTitle" onclick="if(event.target===this)closeModal('enquiryModal')">
+  <div class="modal">
+    <button class="close" aria-label="Close" onclick="closeModal('enquiryModal')">×</button>
+    <h2 id="enquiryTitle">Request a callback</h2>
+    <p>Share your details and we’ll connect you with our service team.</p>
+    <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+      <label for="enquiryName">Your name</label>
+      <input id="enquiryName" name="name" placeholder="Enter your name" required>
+      <label for="enquiryPhone">Mobile number</label>
+      <input id="enquiryPhone" name="phone" type="tel" placeholder="Enter mobile number" required>
+      <label for="enquiryMessage">How can we help?</label>
+      <textarea id="enquiryMessage" name="message" placeholder="Tell us about your appliance"></textarea>
+      <button class="btn btn-dark">Send enquiry on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
 <script>
-function openModal(id){document.getElementById(id).classList.add('open')}
-function closeModal(id){document.getElementById(id).classList.remove('open')}
-function toggleMenu(){document.getElementById('navlinks').classList.toggle('show')}
-function sendMessage(){var f=new FormData(document.querySelector('#loginModal form'));var text='Hello, I would like to arrange a service.%0AName: '+encodeURIComponent(f.get('name'))+'%0AMobile: '+encodeURIComponent(f.get('phone'));window.open('https://wa.me/919167371571?text='+text,'_blank','noopener');closeModal('loginModal')}
-function submitEnquiry(event){event.preventDefault();var f=new FormData(event.currentTarget);var text='Hello, I would like to request a callback.%0AName: '+encodeURIComponent(f.get('name'))+'%0AMobile: '+encodeURIComponent(f.get('phone'))+'%0ARequest: '+encodeURIComponent(f.get('message')||'Appliance service');window.open('https://wa.me/919167371571?text='+text,'_blank','noopener');closeModal('enquiryModal')}
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal('loginModal');closeModal('enquiryModal')}});
-document.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('show')})});
+function openModal(id){
+  document.getElementById(id).classList.add('open');
+}
+
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+}
+
+function toggleMenu(){
+  document.getElementById('navlinks').classList.toggle('show');
+}
+
+function sendMessage(){
+  var f=new FormData(document.querySelector('#loginModal form'));
+  var text='Hello, I would like to arrange a service.%0AName: '+encodeURIComponent(f.get('name'))+'%0AMobile: '+encodeURIComponent(f.get('phone'));
+  window.open('https://wa.me/919167371571?text='+text,'_blank','noopener');
+  closeModal('loginModal');
+}
+
+function submitEnquiry(event){
+  event.preventDefault();
+  var f=new FormData(event.currentTarget);
+  var text='Hello, I would like to request a callback.%0AName: '+encodeURIComponent(f.get('name'))+'%0AMobile: '+encodeURIComponent(f.get('phone'))+'%0ARequest: '+encodeURIComponent(f.get('message')||'Appliance service');
+  window.open('https://wa.me/919167371571?text='+text,'_blank','noopener');
+  closeModal('enquiryModal');
+}
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    closeModal('loginModal');
+    closeModal('enquiryModal');
+  }
+});
+
+document.querySelectorAll('.navlinks a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('navlinks').classList.remove('show');
+  });
+});
 </script>
 </body>
 </html>
